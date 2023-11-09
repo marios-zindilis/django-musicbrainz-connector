@@ -2,7 +2,6 @@ class DjangoMusicBrainzConnectorDatabaseRouter:
     APP_LABEL = "django_musicbrainz_connector"
 
     def db_for_read(self, model, **hints):
-        print(f"Model is {model} returning: {'musicbrainz_db' if model._meta.app_label == self.APP_LABEL else None}")
         return "musicbrainz_db" if model._meta.app_label == self.APP_LABEL else None
 
     def db_for_write(self, model, **hints):

@@ -104,6 +104,16 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     python manage.py migrate
     ```
 
+7.  Include the URLs in your Django project's `urls.py`, for example:
+
+    ```python
+    urlpatterns = [
+        path("admin/", admin.site.urls),
+        path("mb/", include("django_musicbrainz_connector.urls")),  # <--
+        # other stuff here
+    ]
+    ```
+
 ## Notes on Read-Only Access
 
 This app provides read-only connectivity to the database, because it assumes that you maintain a replica of the
@@ -115,5 +125,7 @@ ways:
 
 2.  All models have `Meta.managed` set to `False`.
 
-3.  For models registered in the Django Admin, methods `has_change_permission` and `has_delete_permission` are always
-    set to `False`.
+3.  For models registered in the Django Admin, methods `has_add_permission`, `has_change_permission` and
+    `has_delete_permission` are always set to `False`.
+
+4.  All classes that inherit from Django REST Framework's `ViewSet` have `http_method_names` set to `["get"]` only.
