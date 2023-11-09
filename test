@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# Script to run linters and tests on the django-musicbrainz-connector app.
+
+# print "PASSED" in green colour:
+PASSED() {
+    printf '\033[0;32mPASSED\033[0m\n';
+}
+
+# no need to print "PASSED" for `./manage.py check`, it already prints its own useful output
+./manage.py check                                                       || exit 1
+
+echo -n 'flake8 '
+flake8 .                                                    && PASSED   || exit 1
+
+echo -n 'black '
+black --quiet --check --diff .                              && PASSED   || exit 1
+
+echo -n 'isort '
+isort --quiet --check-only --diff .                         && PASSED   || exit 1
+
+echo -n 'bandit '
+bandit --quiet --recursive . --configfile pyproject.toml    && PASSED   || exit 1
