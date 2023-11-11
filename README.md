@@ -32,7 +32,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'django_musicbrainz_connector',  # <--
+        'django_musicbrainz_connector',  # <-- like this
     ]
     ```
 
@@ -114,7 +114,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     ```python
     urlpatterns = [
         path("admin/", admin.site.urls),
-        path("mb/", include("django_musicbrainz_connector.urls")),  # <--
+        path("mb/", include("django_musicbrainz_connector.urls")),  # <-- like this
         # other stuff here
     ]
     ```
