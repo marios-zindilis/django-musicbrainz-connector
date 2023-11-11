@@ -8,6 +8,7 @@ from django_musicbrainz_connector.models import Work, WorkType
 
 class DjangoMusicBrainzConnectorModelAdmin(admin.ModelAdmin):
     """Subclass of `admin.ModelAdmin` that prevents adding, editing or deleting objects in the Admin interface."""
+
     def has_change_permission(self, request: HttpRequest, obj: Any | None = ...) -> bool:
         return False
 

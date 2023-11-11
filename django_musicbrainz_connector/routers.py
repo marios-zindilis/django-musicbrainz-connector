@@ -2,6 +2,7 @@ class DjangoMusicBrainzConnectorDatabaseRouter:
     """
     Django database router that routes all database access requests to the MusicBrainz database.
     """
+
     APP_LABEL = "django_musicbrainz_connector"
 
     def db_for_read(self, model, **hints):
