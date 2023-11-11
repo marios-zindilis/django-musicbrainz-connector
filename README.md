@@ -1,6 +1,7 @@
 # Django MusicBrainz Connector #
 
 [![Django CI](https://github.com/marios-zindilis/django-musicbrainz-connector/actions/workflows/django.yml/badge.svg)](https://github.com/marios-zindilis/django-musicbrainz-connector/actions/workflows/django.yml)
+[![Docs](https://readthedocs.org/projects/django-musicbrainz-connector/badge/?version=latest)](https://django-musicbrainz-connector.readthedocs.org/en/latest/?badge=latest)
 
 The **Django MusicBrainz Connector** is a Django app that connects to a replica of the MusicBrainz PostgreSQL database.
 
