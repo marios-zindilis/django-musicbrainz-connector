@@ -4,22 +4,19 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
 
 ## Installation
 
-1.  Install this module from [PyPI](https://pypi.org/):
+1.  Using the Django MusicBrainz Connector requires that you have a replica of the MusicBrainz database. You can create
+    one by following the installation steps in the [MusicBrainz Server](https://github.com/metabrainz/musicbrainz-server).
 
-    ```
-    pip install django-musicbrainz-connector
-    ```
-
-    Alternatively, you can install from code with:
+2.  Install this module from code:
 
     ```
     git clone git@github.com:marios-zindilis/django-musicbrainz-connector.git
-    cd django-musicbrainz-connector.git
+    cd django-musicbrainz-connector
     python setup.py sdist
     python -m pip install dist/django-musicbrainz-connector-0.0.1.tar.gz
     ```
 
-2.  Append the app to your Django project's `settings.py` list of `INSTALLED_APPS`, for example:
+3.  Append the app to your Django project's `settings.py` list of `INSTALLED_APPS`, for example:
 
     ```python
     INSTALLED_APPS = [
@@ -33,7 +30,8 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     ]
     ```
 
-3.  Create a read-only user in the MusicBrainz Postgresql replica database:
+4.  Create a read-only user in the MusicBrainz Postgresql replica database. This step is not required, but it is highly
+    recommended. Example commands:
 
     ```sql
     \c musicbrainz_db
@@ -72,8 +70,9 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     SELECT * FROM musicbrainz.area_type;
     ```
 
-4.  Add the MusicBrainz database to your Django project's `settings.py` list of `DATABASES`. You shouldn't use the
-    MusicBrainz database as the Django default database, because this app is only mean to have read access. For example:
+5.  Add the MusicBrainz database to your Django project's `settings.py` list of `DATABASES`. You shouldn't use the
+    MusicBrainz database as the Django default database, because this app is only meant to have read access. For
+    example:
 
     ```python
     DATABASES = {
@@ -90,7 +89,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     }
     ```
 
-5.  Add the database router to your Django project's `settings.py` list of `DATABASE_ROUTERS`, for example:
+6.  Add the database router to your Django project's `settings.py` list of `DATABASE_ROUTERS`, for example:
 
     ```python
     DATABASE_ROUTERS = [
@@ -98,13 +97,13 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     ]
     ```
 
-6.  Apply the migrations. This doesn't make any changes to the MusicBrainz database:
+7.  Apply the migrations. This doesn't make any changes to the MusicBrainz database:
 
     ```
     python manage.py migrate
     ```
 
-7.  Include the URLs in your Django project's `urls.py`, for example:
+8.  Include the URLs in your Django project's `urls.py`, for example:
 
     ```python
     urlpatterns = [
