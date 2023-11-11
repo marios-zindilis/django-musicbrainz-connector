@@ -1,6 +1,5 @@
 # These dependencies are required for running the tests, but not for running the application itself.
 
-django
 flake8
 black
 isort
@@ -8,3 +7,5 @@ bandit
 pytest
 pytest-django
 coverage
+
+-r requirements.txt

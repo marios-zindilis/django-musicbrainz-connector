@@ -10,6 +10,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_musicbrainz_connector",
+    "rest_framework",
 ]
 
 DATABASES = {
