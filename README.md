@@ -1,13 +1,19 @@
 # Django MusicBrainz Connector #
 
-The **Django MusicBrainz Connector** is a Django app that connects to a replica of the MusicBrainz database.
+The **Django MusicBrainz Connector** is a Django app that connects to a replica of the MusicBrainz PostgreSQL database.
 
 ## Installation
 
 1.  Using the Django MusicBrainz Connector requires that you have a replica of the MusicBrainz database. You can create
     one by following the installation steps in the [MusicBrainz Server](https://github.com/metabrainz/musicbrainz-server).
 
-2.  Install this module from code:
+2.  Install this module from PyPI, for example:
+
+    ```
+    python3 -m pip install django-musicbrainz-connector
+    ```
+
+    Alternatively, install from code:
 
     ```
     git clone git@github.com:marios-zindilis/django-musicbrainz-connector.git
