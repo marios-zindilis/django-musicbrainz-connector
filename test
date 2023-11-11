@@ -21,3 +21,6 @@ isort --quiet --check-only --diff .                         && PASSED   || exit 
 
 echo -n 'bandit '
 bandit --quiet --recursive . --configfile pyproject.toml    && PASSED   || exit 1
+
+coverage run -m pytest -vv
+coverage report

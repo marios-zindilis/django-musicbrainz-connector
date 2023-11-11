@@ -10,9 +10,7 @@ class WorkPagination(pagination.PageNumberPagination):
     page_query_param = "page"
 
 
-class WorkSerializer(serializers.HyperlinkedModelSerializer):
-    id = serializers.IntegerField(read_only=True)
-
+class WorkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Work
         fields = "__all__"
