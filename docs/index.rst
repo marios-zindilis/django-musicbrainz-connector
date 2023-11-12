@@ -19,6 +19,14 @@ Models
    work
    work_type
 
+Changelog
+---------
+
+.. toctree::
+   :maxdepth: 1
+
+   changelog
+
 Indices and tables
 ==================
 
