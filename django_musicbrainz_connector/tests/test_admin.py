@@ -1,6 +1,7 @@
 from unittest import mock
 
-from django_musicbrainz_connector.admin import WorkAdmin, WorkType, admin
+from django_musicbrainz_connector.admin import WorkAdmin, admin
+from django_musicbrainz_connector.models.work_type import WorkType
 
 
 def test_django_musicbrainz_connector_model_admin():

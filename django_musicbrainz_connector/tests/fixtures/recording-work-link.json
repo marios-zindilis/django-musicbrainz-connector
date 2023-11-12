@@ -1,0 +1,12 @@
+[
+    {
+        "model": "django_musicbrainz_connector.recordingworklink",
+        "pk": 606936,
+        "fields": {
+            "link": 51696,
+            "recording": 13679939,
+            "work": 11432290,
+            "last_updated": "2023-11-10T20:02:54.412Z"
+        }
+    }
+]

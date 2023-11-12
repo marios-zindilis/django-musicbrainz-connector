@@ -1,0 +1,12 @@
+[
+    {
+        "model": "django_musicbrainz_connector.worktype",
+        "pk": 17,
+        "fields": {
+            "name": "Song",
+            "child_order": 1,
+            "description": "A song is in its origin (and still in most cases) a composition for voice...",
+            "gid": "f061270a-2fd6-32f1-a641-f0f8676d14e6"
+        }
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.artistcredit",
+        "pk": 1002760,
+        "fields": {
+            "name": "Ιωάννα Γεωργακοπούλου, Στελλάκης Περπινιάδης & Βασίλης Τσιτσάνης",
+            "artist_count": 3,
+            "ref_count": 2,
+            "created": "2023-11-10T20:02:54.412Z",
+            "gid": "8c9bafac-0df4-33c0-a7e2-61b4d5774936"
+        }
+    }
+]

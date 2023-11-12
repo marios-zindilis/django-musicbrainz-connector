@@ -1,0 +1,12 @@
+[
+    {
+        "model": "django_musicbrainz_connector.work",
+        "pk": 11432290,
+        "fields": {
+            "name": "Η αχάριστη",
+            "gid": "fe4f5295-4d0f-32bd-8029-743f740d31f1",
+            "type": 17,
+            "last_updated": "2023-11-10T20:02:54.412Z"
+        }
+    }
+]

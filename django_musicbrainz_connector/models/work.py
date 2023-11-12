@@ -1,17 +1,35 @@
-from django.db import models
+"""
+.. module:: work
 
+PostgreSQL Definition
+---------------------
 
-class Work(models.Model):
-    """
-        CREATE TABLE work ( -- replicate (verbose)
+The :code:`work` table is defined in the MusicBrainz Server as:
+
+.. code-block:: sql
+
+    CREATE TABLE work ( -- replicate (verbose)
         id                  SERIAL,
         gid                 UUID NOT NULL,
         name                VARCHAR NOT NULL,
         type                INTEGER, -- references work_type.id
         comment             VARCHAR(255) NOT NULL DEFAULT '',
         edits_pending       INTEGER NOT NULL DEFAULT 0 CHECK (edits_pending >= 0),
-        last_updated        TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+        last_updated        TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     );
+
+"""
+
+from django.db import models
+
+from django_musicbrainz_connector.models.link_type import LinkType
+from django_musicbrainz_connector.models.recording_work_link import RecordingWorkLink
+
+
+class Work(models.Model):
+    """
+    Model of a Work. In addition to the attributes that come from the MusicBrainz server, this model has a
+    `musicbrainz_link` property that returns a link to open the work in the MusicBrainz website.
     """
 
     id = models.IntegerField("ID", primary_key=True, db_column="id")
@@ -23,6 +41,17 @@ class Work(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    @property
+    def musicbrainz_link(self) -> str:
+        return f"https://musicbrainz.org/work/{self.gid}"
+
+    @property
+    def recordings(self):
+        """Return recordings of this work."""
+        performance = LinkType.objects.get(name="performance", entity_type0="recording", entity_type1="work")
+        recording_work_links = RecordingWorkLink.objects.filter(work=self, link__link_type=performance)
+        return [link.recording for link in recording_work_links]
 
     class Meta:
         managed = False

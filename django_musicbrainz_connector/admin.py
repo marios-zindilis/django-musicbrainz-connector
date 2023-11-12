@@ -3,7 +3,7 @@ from typing import Any
 from django.contrib import admin
 from django.http.request import HttpRequest
 
-from django_musicbrainz_connector.models import Work, WorkType
+from django_musicbrainz_connector import models
 
 
 class DjangoMusicBrainzConnectorModelAdmin(admin.ModelAdmin):
@@ -19,11 +19,36 @@ class DjangoMusicBrainzConnectorModelAdmin(admin.ModelAdmin):
         return False
 
 
-@admin.register(Work)
+@admin.register(models.ArtistCredit)
+class ArtistCreditAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
+
+
+@admin.register(models.Link)
+class LinkAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
+
+
+@admin.register(models.LinkType)
+class LinkTypeAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    list_display = ["name", "entity_type0", "entity_type1", "description"]
+
+
+@admin.register(models.Recording)
+class RecordingAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
+
+
+@admin.register(models.RecordingWorkLink)
+class RecordingWorkLinkAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    list_display = ["id", "link_type", "recording", "work"]
+
+
+@admin.register(models.Work)
 class WorkAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
 
 
-@admin.register(WorkType)
+@admin.register(models.WorkType)
 class WorkTypeAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass

@@ -1,0 +1,14 @@
+[
+    {
+        "model": "django_musicbrainz_connector.linktype",
+        "pk": 278,
+        "fields": {
+            "name": "performance",
+            "entity_type0": "recording",
+            "entity_type1": "work",
+            "child_order": 0,
+            "gid": "a3005666-a872-32c3-ad06-98af558e99b0",
+            "last_updated": "2023-11-10T20:02:54.412Z"
+        }
+    }
+]
