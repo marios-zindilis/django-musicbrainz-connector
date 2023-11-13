@@ -6,7 +6,7 @@ from django_musicbrainz_connector.models.link_type import LinkType
 
 @pytest.mark.django_db
 def test_link_type_serializer():
-    link_type = LinkType.objects.get(id=278)
-    serializer = LinkTypeSerializer(instance=link_type)
+    instance = LinkType.objects.get(id=278)
+    serializer = LinkTypeSerializer(instance=instance)
 
     assert serializer.data["name"] == "performance"
