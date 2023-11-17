@@ -1,9 +1,6 @@
 import uuid
 
-from django.http import Http404
 from rest_framework import serializers, viewsets
-from rest_framework.response import Response
-from rest_framework.views import APIView
 
 from django_musicbrainz_connector.models import WorkType
 
