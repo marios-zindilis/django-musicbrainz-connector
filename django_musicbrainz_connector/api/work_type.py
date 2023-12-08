@@ -14,6 +14,10 @@ class WorkTypeSerializer(serializers.ModelSerializer):
 
 
 def _get_work_type_identifier_type(identifier: str | int) -> Literal["gid", "name", "id"]:
+    """
+    A Work Type can be identified either by its ID, or GID or Name. This works for Work Types as long as their names are
+    unique in MusicBrainz.
+    """
     try:
         uuid.UUID(identifier)
     except (ValueError, AttributeError):
