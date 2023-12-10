@@ -4,6 +4,7 @@ from typing import Literal
 from rest_framework import serializers, viewsets
 from rest_framework.exceptions import NotFound
 
+from django_musicbrainz_connector.api import DjangoMusicBrainzConnectorPagination
 from django_musicbrainz_connector.models import WorkType
 
 
@@ -36,6 +37,7 @@ class WorkTypeViewSet(viewsets.ModelViewSet):
     queryset = WorkType.objects.all()
     serializer_class = WorkTypeSerializer
     http_method_names = ["get"]
+    pagination_class = DjangoMusicBrainzConnectorPagination
 
     def get_object(self):
         """
