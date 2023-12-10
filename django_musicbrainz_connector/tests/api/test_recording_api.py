@@ -14,6 +14,7 @@ RECORDING_API_RESPONSE = {
     "last_updated": "2023-11-10T14:02:54.412000-06:00",
     "video": False,
     "artist_credit": 1002760,
+    "recording_of": ["fe4f5295-4d0f-32bd-8029-743f740d31f1"],
 }
 
 

@@ -9,9 +9,14 @@ from django_musicbrainz_connector.models import Recording
 
 
 class RecordingSerializer(serializers.ModelSerializer):
+    recording_of = serializers.SerializerMethodField()
+
     class Meta:
         model = Recording
         fields = "__all__"
+
+    def get_recording_of(self, recording):
+        return [str(work.gid) for work in recording.recording_of]
 
 
 def _get_recording_identifier_type(identifier: str | int) -> Literal["gid", "id"]:

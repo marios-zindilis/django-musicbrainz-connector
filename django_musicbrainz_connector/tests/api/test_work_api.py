@@ -11,6 +11,7 @@ WORK_API_RESPONSE = {
     "edits_pending": 0,
     "last_updated": "2023-11-10T14:02:54.412000-06:00",
     "type": 17,
+    "recordings": ["fdb9d6f4-73f2-41f2-ba57-a8dbb65433a2"],
 }
 
 
