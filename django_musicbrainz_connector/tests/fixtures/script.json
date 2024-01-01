@@ -1,0 +1,12 @@
+[
+    {
+        "model": "django_musicbrainz_connector.script",
+        "pk": 22,
+        "fields": {
+            "iso_code": "Grek",
+            "iso_number": "200",
+            "name": "Greek",
+            "frequency": 4
+        }
+    }
+]

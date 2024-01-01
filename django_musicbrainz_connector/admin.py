@@ -44,6 +44,11 @@ class RecordingWorkLinkAdmin(DjangoMusicBrainzConnectorModelAdmin):
     list_display = ["id", "link_type", "recording", "work"]
 
 
+@admin.register(models.Script)
+class ScriptAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
+
+
 @admin.register(models.Work)
 class WorkAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
