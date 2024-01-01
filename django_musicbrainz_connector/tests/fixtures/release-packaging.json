@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.releasepackaging",
+        "pk": 1,
+        "fields": {
+            "name": "Jewel Case",
+            "parent": null,
+            "child_order": 0,
+            "description": "The traditional CD case, made of hard, brittle plastic.",
+            "gid": "ec27701a-4a22-37f4-bfac-6616e0f9750a"
+        }
+    }
+]

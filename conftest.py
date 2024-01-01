@@ -29,3 +29,4 @@ def django_db_setup(django_db_setup, django_db_blocker):
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/recording-work-link.json")
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/script.json")
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/language.json")
+        call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/release-packaging.json")

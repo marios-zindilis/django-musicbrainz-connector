@@ -62,3 +62,8 @@ class WorkTypeAdmin(DjangoMusicBrainzConnectorModelAdmin):
 @admin.register(models.Language)
 class LanguageAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
+
+
+@admin.register(models.ReleasePackaging)
+class ReleasePackagingAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
