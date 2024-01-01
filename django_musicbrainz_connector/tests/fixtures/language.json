@@ -1,0 +1,14 @@
+[
+    {
+        "model": "django_musicbrainz_connector.language",
+        "pk": 159,
+        "fields": {
+            "iso_code_2t": "ell",
+            "iso_code_2b": "gre",
+            "iso_code_1": "el",
+            "name": "Greek",
+            "frequency": 2,
+            "iso_code_3": "ell"
+        }
+    }
+]

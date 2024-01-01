@@ -57,3 +57,8 @@ class WorkAdmin(DjangoMusicBrainzConnectorModelAdmin):
 @admin.register(models.WorkType)
 class WorkTypeAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
+
+
+@admin.register(models.Language)
+class LanguageAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass
