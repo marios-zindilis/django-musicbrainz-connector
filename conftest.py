@@ -33,3 +33,4 @@ def django_db_setup(django_db_setup, django_db_blocker):
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/release-status.json")
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/release-group-primary-type.json")
         call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/release-group.json")
+        call_command("loaddata", "django_musicbrainz_connector/tests/fixtures/release.json")

@@ -1,0 +1,21 @@
+[
+    {
+        "model": "django_musicbrainz_connector.release",
+        "pk": 2681644,
+        "fields": {
+            "gid": "a026f47e-5ce7-4b6f-8469-cdf8c4bccb4b",
+            "name": "Φάνταζες σαν πριγκηπέσα / Είσαι αριστοκράτισσα κι ωραία",
+            "artist_credit": 205524,
+            "release_group": 2369755,
+            "status": 1,
+            "packaging": null,
+            "language": 159,
+            "script": 22,
+            "barcode": null,
+            "comment": "",
+            "edits_pending": 0,
+            "quality": -1,
+            "last_updated": "2023-11-10T20:02:54.412Z"
+        }
+    }
+]
