@@ -8,6 +8,7 @@ from django_musicbrainz_connector.api.link_type import LinkTypeViewSet
 from django_musicbrainz_connector.api.recording import RecordingViewSet
 from django_musicbrainz_connector.api.recording_work_link import RecordingWorkLinkViewSet
 from django_musicbrainz_connector.api.release_packaging import ReleasePackagingViewSet
+from django_musicbrainz_connector.api.release_status import ReleaseStatusViewSet
 from django_musicbrainz_connector.api.script import ScriptViewSet
 from django_musicbrainz_connector.api.work import WorkViewSet
 from django_musicbrainz_connector.api.work_type import WorkTypeViewSet
@@ -20,6 +21,7 @@ router.register(r"link-types", LinkTypeViewSet)
 router.register(r"recordings", RecordingViewSet)
 router.register(r"recording-work-links", RecordingWorkLinkViewSet)
 router.register(r"release-packaging", ReleasePackagingViewSet)
+router.register(r"release-statuses", ReleaseStatusViewSet)
 router.register(r"scripts", ScriptViewSet)
 router.register(r"works", WorkViewSet)
 router.register(r"work-types", WorkTypeViewSet)

@@ -67,3 +67,8 @@ class LanguageAdmin(DjangoMusicBrainzConnectorModelAdmin):
 @admin.register(models.ReleasePackaging)
 class ReleasePackagingAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
+
+
+@admin.register(models.ReleaseStatus)
+class ReleaseStatusAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass

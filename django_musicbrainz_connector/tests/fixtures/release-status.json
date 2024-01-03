@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.releasestatus",
+        "pk": 1,
+        "fields": {
+            "name": "Official",
+            "parent": null,
+            "child_order": 1,
+            "description": "Any release officially sanctioned by the artist and/or their record company. Most releases will fit into this category.",
+            "gid": "4e304316-386d-3409-af2e-78857eec5cfe"
+        }
+    }
+]

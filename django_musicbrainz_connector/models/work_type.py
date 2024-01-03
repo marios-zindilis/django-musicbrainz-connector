@@ -37,3 +37,4 @@ class WorkType(models.Model):
         managed = False
         db_table = "work_type"
         verbose_name_plural = "Work Types"
+        ordering = ["name"]
