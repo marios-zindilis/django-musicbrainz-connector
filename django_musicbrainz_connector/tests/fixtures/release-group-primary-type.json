@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.releasegroupprimarytype",
+        "pk": 1,
+        "fields": {
+            "name": "Album",
+            "parent": null,
+            "child_order": 1,
+            "description": "An album, perhaps better defined as a \"Long Play\" (LP) release, generally consists of previously unreleased material (unless this type is combined with secondary types which change that, such as \"Compilation\").",
+            "gid": "f529b476-6e62-324f-b0aa-1f3e33d313fc"
+        }
+    }
+]
