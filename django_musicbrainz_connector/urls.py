@@ -15,6 +15,7 @@ from django_musicbrainz_connector.api.release_group_primary_type import ReleaseG
 from django_musicbrainz_connector.api.release_packaging import ReleasePackagingViewSet
 from django_musicbrainz_connector.api.release_status import ReleaseStatusViewSet
 from django_musicbrainz_connector.api.script import ScriptViewSet
+from django_musicbrainz_connector.api.track import TrackViewSet
 from django_musicbrainz_connector.api.work import WorkViewSet
 from django_musicbrainz_connector.api.work_type import WorkTypeViewSet
 
@@ -33,6 +34,7 @@ router.register(r"release-group-primary-types", ReleaseGroupPrimaryTypeViewSet)
 router.register(r"release-packaging", ReleasePackagingViewSet)
 router.register(r"release-statuses", ReleaseStatusViewSet)
 router.register(r"scripts", ScriptViewSet)
+router.register(r"tracks", TrackViewSet)
 router.register(r"works", WorkViewSet)
 router.register(r"work-types", WorkTypeViewSet)
 

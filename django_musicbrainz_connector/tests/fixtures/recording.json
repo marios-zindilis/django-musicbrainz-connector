@@ -9,5 +9,19 @@
             "last_updated": "2023-11-10T20:02:54.412Z",
             "length": 195000
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.recording",
+        "pk": 13679972,
+        "fields": {
+            "gid": "cd726d65-7f36-415f-b539-9dc4527b8580",
+            "name": "Φάνταζες σαν πριγκιπέσα",
+            "length": 190000,
+            "comment": "",
+            "edits_pending": 0,
+            "last_updated": "2012-06-19T21:39:39.479103Z",
+            "video": false,
+            "artist_credit": 1002781
+        }
     }
 ]

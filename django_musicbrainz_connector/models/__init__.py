@@ -12,6 +12,7 @@ from django_musicbrainz_connector.models.release_group_primary_type import Relea
 from django_musicbrainz_connector.models.release_packaging import ReleasePackaging
 from django_musicbrainz_connector.models.release_status import ReleaseStatus
 from django_musicbrainz_connector.models.script import Script
+from django_musicbrainz_connector.models.track import Track
 from django_musicbrainz_connector.models.work import Work
 from django_musicbrainz_connector.models.work_type import WorkType
 
@@ -30,6 +31,7 @@ __all__ = [
     "ReleasePackaging",
     "ReleaseStatus",
     "Script",
+    "Track",
     "Work",
     "WorkType",
 ]

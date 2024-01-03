@@ -97,3 +97,8 @@ class MediumFormatAdmin(DjangoMusicBrainzConnectorModelAdmin):
 @admin.register(models.Medium)
 class MediumAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
+
+
+@admin.register(models.Track)
+class TrackAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass

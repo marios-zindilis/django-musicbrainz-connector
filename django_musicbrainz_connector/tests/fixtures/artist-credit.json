@@ -20,5 +20,17 @@
             "created": "2023-11-10T20:02:54.412Z",
             "gid": "0e83e00a-a28c-3e80-9c00-5fa3d92cb2b1"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.artistcredit",
+        "pk": 1002781,
+        "fields": {
+            "name": "Απόστολος Χατζηχρήστος, Μάρκος Βαμβακάρης & Βασίλης Τσιτσάνης",
+            "artist_count": 3,
+            "ref_count": 4,
+            "created": "2012-06-19T21:39:39.479103Z",
+            "edits_pending": 0,
+            "gid": "1227e205-bf71-3bb0-ad47-8ed6c6e3be0f"
+        }
     }
 ]

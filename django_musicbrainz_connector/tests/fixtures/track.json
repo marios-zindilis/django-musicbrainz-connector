@@ -1,0 +1,19 @@
+[
+    {
+        "model": "django_musicbrainz_connector.track",
+        "pk": 31083305,
+        "fields": {
+            "gid": "6744f21c-5112-49d9-bf59-81c25c4d9dd0",
+            "position": 1,
+            "number": "A",
+            "name": "Φάνταζες σαν πριγκηπέσα",
+            "length": null,
+            "edits_pending": 0,
+            "last_updated": "2020-04-19T17:53:28.789455Z",
+            "is_data_track": false,
+            "recording": 13679972,
+            "medium": 2912288,
+            "artist_credit": 205524
+        }
+    }
+]

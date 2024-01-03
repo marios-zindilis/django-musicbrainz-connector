@@ -18,7 +18,7 @@ def test_artist_credit_GET():
     api_client = APIClient()
     response = api_client.get("/api/artist-credits/")
     assert response.status_code == 200
-    assert response.data["count"] == 2
+    assert response.data["count"] == 3
     assert response.data["next"] is None
     assert response.data["previous"] is None
     assert response.data["results"] == [
@@ -39,5 +39,14 @@ def test_artist_credit_GET():
             "created": "2023-11-10T14:02:54.412000-06:00",
             "edits_pending": 0,
             "gid": "8c9bafac-0df4-33c0-a7e2-61b4d5774936",
+        },
+        {
+            "id": 1002781,
+            "name": "Απόστολος Χατζηχρήστος, Μάρκος Βαμβακάρης & Βασίλης Τσιτσάνης",
+            "artist_count": 3,
+            "ref_count": 4,
+            "created": "2012-06-19T16:39:39.479103-05:00",
+            "edits_pending": 0,
+            "gid": "1227e205-bf71-3bb0-ad47-8ed6c6e3be0f",
         },
     ]
