@@ -1,0 +1,15 @@
+[
+    {
+        "model": "django_musicbrainz_connector.medium",
+        "pk": 2912288,
+        "fields": {
+            "position": 1,
+            "name": "",
+            "edits_pending": 0,
+            "last_updated": "2020-04-19T17:53:28.789455Z",
+            "track_count": 2,
+            "release": 2681644,
+            "format": 73
+        }
+    }
+]

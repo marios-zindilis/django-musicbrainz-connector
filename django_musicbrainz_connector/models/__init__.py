@@ -2,6 +2,7 @@ from django_musicbrainz_connector.models.artist_credit import ArtistCredit
 from django_musicbrainz_connector.models.language import Language
 from django_musicbrainz_connector.models.link import Link
 from django_musicbrainz_connector.models.link_type import LinkType
+from django_musicbrainz_connector.models.medium import Medium
 from django_musicbrainz_connector.models.medium_format import MediumFormat
 from django_musicbrainz_connector.models.recording import Recording
 from django_musicbrainz_connector.models.recording_work_link import RecordingWorkLink
@@ -19,6 +20,7 @@ __all__ = [
     "Language",
     "Link",
     "LinkType",
+    "Medium",
     "MediumFormat",
     "Recording",
     "RecordingWorkLink",
