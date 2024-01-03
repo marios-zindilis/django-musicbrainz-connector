@@ -5,6 +5,7 @@ from django_musicbrainz_connector.api.artist_credit import ArtistCreditViewSet
 from django_musicbrainz_connector.api.language import LanguageViewSet
 from django_musicbrainz_connector.api.link import LinkViewSet
 from django_musicbrainz_connector.api.link_type import LinkTypeViewSet
+from django_musicbrainz_connector.api.medium_format import MediumFormatViewSet
 from django_musicbrainz_connector.api.recording import RecordingViewSet
 from django_musicbrainz_connector.api.recording_work_link import RecordingWorkLinkViewSet
 from django_musicbrainz_connector.api.release import ReleaseViewSet
@@ -21,6 +22,7 @@ router.register(r"artist-credits", ArtistCreditViewSet)
 router.register(r"languages", LanguageViewSet)
 router.register(r"links", LinkViewSet)
 router.register(r"link-types", LinkTypeViewSet)
+router.register(r"medium-formats", MediumFormatViewSet)
 router.register(r"recordings", RecordingViewSet)
 router.register(r"recording-work-links", RecordingWorkLinkViewSet)
 router.register(r"releases", ReleaseViewSet)

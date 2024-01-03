@@ -1,0 +1,15 @@
+[
+    {
+        "model": "django_musicbrainz_connector.mediumformat",
+        "pk": 73,
+        "fields": {
+            "name": "Phonograph record",
+            "child_order": 2,
+            "year": 1886,
+            "has_discids": false,
+            "description": "Flat discs with grooves used in phonographs/gramophones. For shellac and vinyl records, use that specifically",
+            "gid": "3f9883d5-12dc-4866-a4e1-b240065c2155",
+            "parent": null
+        }
+    }
+]
