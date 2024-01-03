@@ -77,3 +77,8 @@ class ReleaseStatusAdmin(DjangoMusicBrainzConnectorModelAdmin):
 @admin.register(models.ReleaseGroupPrimaryType)
 class ReleaseGroupPrimaryTypeAdmin(DjangoMusicBrainzConnectorModelAdmin):
     pass
+
+
+@admin.register(models.ReleaseGroup)
+class ReleaseGroupAdmin(DjangoMusicBrainzConnectorModelAdmin):
+    pass

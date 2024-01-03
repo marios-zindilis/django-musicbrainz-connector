@@ -9,5 +9,16 @@
             "created": "2023-11-10T20:02:54.412Z",
             "gid": "8c9bafac-0df4-33c0-a7e2-61b4d5774936"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.artistcredit",
+        "pk": 205524,
+        "fields": {
+            "name": "Βασίλης Τσιτσάνης",
+            "artist_count": 1,
+            "ref_count": 336,
+            "created": "2023-11-10T20:02:54.412Z",
+            "gid": "0e83e00a-a28c-3e80-9c00-5fa3d92cb2b1"
+        }
     }
 ]

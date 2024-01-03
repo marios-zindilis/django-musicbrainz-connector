@@ -9,5 +9,16 @@
             "description": "An album, perhaps better defined as a \"Long Play\" (LP) release, generally consists of previously unreleased material (unless this type is combined with secondary types which change that, such as \"Compilation\").",
             "gid": "f529b476-6e62-324f-b0aa-1f3e33d313fc"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.releasegroupprimarytype",
+        "pk": 2,
+        "fields": {
+            "name": "Single",
+            "parent": null,
+            "child_order": 2,
+            "description": "Some super long description for the single...",
+            "gid": "d6038452-8ee0-3f68-affc-2de9a1ede0b9"
+        }
     }
 ]
