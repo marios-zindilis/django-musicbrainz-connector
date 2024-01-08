@@ -96,7 +96,8 @@ class MediumFormatAdmin(DjangoMusicBrainzConnectorModelAdmin):
 
 @admin.register(models.Medium)
 class MediumAdmin(DjangoMusicBrainzConnectorModelAdmin):
-    pass
+    list_display = ["id", "release", "position", "format", "track_count"]
+    list_display_links = ["id"]
 
 
 @admin.register(models.Track)

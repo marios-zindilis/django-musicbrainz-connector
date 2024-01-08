@@ -15,3 +15,16 @@ class MediumViewSet(viewsets.ModelViewSet):
     serializer_class = MediumSerializer
     http_method_names = ["get"]
     pagination_class = DjangoMusicBrainzConnectorPagination
+
+    def get_queryset(self):
+        """
+        Overriding the default `get_queryset` method of `ModelViewSet` to allow listing Medium instances by the release
+        ID (an integer). Call with:
+
+        GET /api/media/?release-id=1234
+        """
+        queryset = Medium.objects.all()
+        release_id = self.request.query_params.get("release-id")
+        if release_id is not None:
+            queryset = queryset.filter(release_id=release_id)
+        return queryset
