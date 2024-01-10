@@ -1,36 +1,15 @@
-import uuid
-from typing import Literal
-
 from rest_framework import serializers, viewsets
 from rest_framework.exceptions import NotFound
 
 from django_musicbrainz_connector.api import DjangoMusicBrainzConnectorPagination
 from django_musicbrainz_connector.models import WorkType
+from django_musicbrainz_connector.utils import get_musicbrainz_identifier_type
 
 
 class WorkTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = WorkType
         fields = "__all__"
-
-
-def _get_work_type_identifier_type(identifier: str | int) -> Literal["gid", "name", "id"]:
-    """
-    A Work Type can be identified either by its ID, or GID or Name. This works for Work Types as long as their names are
-    unique in MusicBrainz.
-    """
-    try:
-        uuid.UUID(identifier)
-    except (ValueError, AttributeError):
-        pass
-    else:
-        return "gid"
-    try:
-        int(identifier)
-    except ValueError:
-        return "name"
-    else:
-        return "id"
 
 
 class WorkTypeViewSet(viewsets.ModelViewSet):
@@ -48,7 +27,7 @@ class WorkTypeViewSet(viewsets.ModelViewSet):
             GET /api/work-types/Musical/
         """
         pk = self.kwargs["pk"]
-        pk_type = _get_work_type_identifier_type(pk)
+        pk_type = get_musicbrainz_identifier_type(pk)
         params = {pk_type: pk}
         try:
             return self.serializer_class.Meta.model.objects.get(**params)
