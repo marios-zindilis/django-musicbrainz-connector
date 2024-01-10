@@ -15,3 +15,16 @@ class TrackViewSet(viewsets.ModelViewSet):
     serializer_class = TrackSerializer
     http_method_names = ["get"]
     pagination_class = DjangoMusicBrainzConnectorPagination
+
+    def get_queryset(self):
+        """
+        Overriding the default `get_queryset` method of `ModelViewSet` to allow listing Track instances by the medium ID
+        (an integer), essentially getting all tracks for a medium. Call with:
+
+            GET /api/tracks/?medium-id=1234
+        """
+        queryset = Track.objects.all()
+        medium_id = self.request.query_params.get("medium-id")
+        if medium_id is not None:
+            queryset = queryset.filter(medium_id=medium_id)
+        return queryset

@@ -19,9 +19,9 @@ class MediumViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         """
         Overriding the default `get_queryset` method of `ModelViewSet` to allow listing Medium instances by the release
-        ID (an integer). Call with:
+        ID (an integer), essentially getting all media for a release. Call with:
 
-        GET /api/media/?release-id=1234
+            GET /api/media/?release-id=1234
         """
         queryset = Medium.objects.all()
         release_id = self.request.query_params.get("release-id")
