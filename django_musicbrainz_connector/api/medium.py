@@ -1,10 +1,16 @@
 from rest_framework import serializers, viewsets
 
 from django_musicbrainz_connector.api import DjangoMusicBrainzConnectorPagination
+from django_musicbrainz_connector.api.track import TrackSerializer
 from django_musicbrainz_connector.models import Medium
 
 
 class MediumSerializer(serializers.ModelSerializer):
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation["tracks"] = [TrackSerializer(track).data for track in instance.tracks.all()]
+        return representation
+
     class Meta:
         model = Medium
         fields = "__all__"

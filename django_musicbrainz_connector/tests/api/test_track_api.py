@@ -11,9 +11,20 @@ EXPECTED_TRACK_API_RESPONSE = {
     "edits_pending": 0,
     "last_updated": "2020-04-19T12:53:28.789455-05:00",
     "is_data_track": False,
-    "recording": 13679972,
     "medium": 2912288,
     "artist_credit": 205524,
+    "recording": {
+        "id": 13679972,
+        "gid": "cd726d65-7f36-415f-b539-9dc4527b8580",
+        "name": "Φάνταζες σαν πριγκιπέσα",
+        "length": 190000,
+        "comment": "",
+        "edits_pending": 0,
+        "last_updated": "2012-06-19T16:39:39.479103-05:00",
+        "video": False,
+        "artist_credit": 1002781,
+        "recording_of": [],
+    },
 }
 
 

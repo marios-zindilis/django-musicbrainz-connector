@@ -43,4 +43,4 @@ class Medium(models.Model):
         managed = False
         db_table = "medium"
         verbose_name_plural = "Media"
-        ordering = ["name"]
+        ordering = ["position"]
