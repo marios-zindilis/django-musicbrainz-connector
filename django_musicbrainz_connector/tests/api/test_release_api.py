@@ -9,7 +9,15 @@ RELEASE_RESPONSE = {
     "release_group": 2369755,
     "status": 1,
     "packaging": None,
-    "language": 159,
+    "language": {
+        "id": 159,
+        "iso_code_2t": "ell",
+        "iso_code_2b": "gre",
+        "iso_code_1": "el",
+        "name": "Greek",
+        "frequency": 2,
+        "iso_code_3": "ell",
+    },
     "script": {
         "id": 22,
         "iso_code": "Grek",
