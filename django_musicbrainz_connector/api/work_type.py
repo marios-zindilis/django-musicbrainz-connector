@@ -30,6 +30,6 @@ class WorkTypeViewSet(viewsets.ModelViewSet):
         pk_type = get_musicbrainz_identifier_type(pk)
         params = {pk_type: pk}
         try:
-            return self.serializer_class.Meta.model.objects.get(**params)
-        except self.serializer_class.Meta.model.DoesNotExist:
+            return WorkType.objects.get(**params)
+        except WorkType.DoesNotExist:
             raise NotFound
